@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>乙女ゲーム - タイトル</title>
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="game.css">
+
+  <!-- 共通JS -->
+  <script src="game.js"></script>
+
+  <style>
+    body {
+      text-align: center;
+      padding-top: 80px;
+    }
+    h1 {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>乙女ゲーム（仮）</h1>
+
+  <button id="startBtn">スタート</button>
+  <br>
+  <button onclick="continueGame()">続きから</button>
+  <br>
+  <button id="resetBtn">セーブデータ初期化</button>
+
+  <script>
+    // -------------------------
+    // スタートボタン
+    // -------------------------
+    document.getElementById("startBtn").addEventListener("click", () => {
+      startNewGame();   // ← game.js の関数
+    });
+
+    // -------------------------
+    // セーブデータ初期化
+    // -------------------------
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      if (confirm("セーブデータを削除しますか？")) {
+        localStorage.removeItem("otomeSave");
+        alert("セーブデータを初期化しました");
+      }
+    });
+
+    // タイトル画面は progress チェック不要
+    disableBack();  // 戻る封印（replace方式なので実質何もしない）
+  </script>
+
+</body>
+</html>
