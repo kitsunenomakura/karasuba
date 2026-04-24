@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>オープニング</title>
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="game.css">
+
+  <!-- 共通JS -->
+  <script src="game.js"></script>
+</head>
+<body>
+
+  <h1>オープニング</h1>
+
+  <p>
+    あなたは今日から新しい学園生活を迎える。  
+    校門をくぐった瞬間、胸が高鳴る。  
+    ここでどんな出会いが待っているのだろうか……。
+  </p>
+
+  <p>最初に誰と出会う？</p>
+
+  <div class="choice">
+    <button onclick="goStory1('A')">A：クールな先輩</button>
+    <button onclick="goStory1('B')">B：幼なじみ</button>
+    <button onclick="goStory1('C')">C：同級生</button>
+  </div>
+
+  <script>
+    // 正しい進行位置かチェック
+    checkProgress("opening");
+
+    // 戻るボタン封印（replace方式なので実質何もしない）
+    disableBack();
+
+    // story1 へ進む処理
+    function goStory1(route) {
+      const data = loadData();
+      data.progress = "story1_" + route;
+      saveData(data);
+
+      goTo("story1_" + route);
+    }
+  </script>
+
+</body>
+</html>
