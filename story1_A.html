@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ストーリー① - A（先輩）</title>
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="game.css">
+
+  <!-- 共通JS -->
+  <script src="game.js"></script>
+</head>
+<body>
+
+  <h1>ストーリー①（A：クールな先輩）</h1>
+
+  <p>
+    先輩は静かにあなたを見つめた。  
+    「……新入生か。迷ってるなら案内してやる」  
+    その声は冷たいようで、どこか優しさが滲んでいた。
+  </p>
+
+  <p>次に誰と話す？</p>
+
+  <div class="choice">
+    <button onclick="chooseRoute('A')">A：先輩と話す</button>
+    <button onclick="chooseRoute('B')">B：幼なじみを探す</button>
+    <button onclick="chooseRoute('C')">C：同級生に声をかける</button>
+  </div>
+
+  <script>
+    checkProgress("story1_A");
+    disableBack();
+
+    function chooseRoute(route) {
+      addLove("A"); // story1_A に入ったので A の好感度 +1
+
+      const data = loadData();
+      data.progress = "story2_" + route;
+      saveData(data);
+
+      goTo("story2_" + route);
+    }
+  </script>
+
+</body>
+</html>

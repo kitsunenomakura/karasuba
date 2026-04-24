@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ストーリー① - B（幼なじみ）</title>
+
+  <link rel="stylesheet" href="game.css">
+  <script src="game.js"></script>
+</head>
+<body>
+
+  <h1>ストーリー①（B：幼なじみ）</h1>
+
+  <p>
+    幼なじみはあなたを見るなり笑顔を見せた。  
+    「やっと来た！今日からまた一緒だね」  
+    その声は懐かしくて、安心感に包まれる。
+  </p>
+
+  <p>次に誰と話す？</p>
+
+  <div class="choice">
+    <button onclick="chooseRoute('A')">A：先輩と話す</button>
+    <button onclick="chooseRoute('B')">B：幼なじみと話す</button>
+    <button onclick="chooseRoute('C')">C：同級生に声をかける</button>
+  </div>
+
+  <script>
+    checkProgress("story1_B");
+    disableBack();
+
+    function chooseRoute(route) {
+      addLove("B"); // B の好感度 +1
+
+      const data = loadData();
+      data.progress = "story2_" + route;
+      saveData(data);
+
+      goTo("story2_" + route);
+    }
+  </script>
+
+</body>
+</html>

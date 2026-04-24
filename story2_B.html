@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ストーリー② - B（幼なじみ）</title>
+
+  <link rel="stylesheet" href="game.css">
+  <script src="game.js"></script>
+</head>
+<body>
+
+  <h1>ストーリー②（B：幼なじみ）</h1>
+
+  <p>
+    幼なじみはあなたの手を引いて校庭へ向かった。  
+    「覚えてる？小さい頃、ここでよく遊んだよね」  
+    懐かしい思い出がよみがえり、距離が一気に縮まる。
+  </p>
+
+  <div class="choice">
+    <button onclick="goEnding()">エンディングへ進む</button>
+  </div>
+
+  <script>
+    checkProgress("story2_B");
+    disableBack();
+
+    function goEnding() {
+      addLove("B"); // B の好感度 +1
+
+      const data = loadData();
+      data.progress = "ending";
+      saveData(data);
+
+      goTo("ending");
+    }
+  </script>
+
+</body>
+</html>

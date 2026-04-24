@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>エンディング分岐</title>
+
+  <link rel="stylesheet" href="game.css">
+  <script src="game.js"></script>
+
+  <style>
+    body {
+      text-align: center;
+      padding-top: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1></h1>
+
+  <script>
+    // 正しい進行位置かチェック
+    checkProgress("ending");
+    disableBack();
+
+    // -------------------------
+    // エンド分岐処理
+    // -------------------------
+    const data = loadData();
+
+    let ending = "normal"; // デフォルトはノーマル
+
+    // 好感度2以上でエンド確定
+    if (data.love.A >= 2) {
+      ending = "A";
+    } else if (data.love.B >= 2) {
+      ending = "B";
+    } else if (data.love.C >= 2) {
+      ending = "C";
+    }
+
+    // クリアフラグ更新
+    data.clear[ending] = true;
+
+    // 進行位置更新
+    data.progress = "end_" + ending;
+
+    saveData(data);
+
+    // エンドページへ遷移
+    goTo("end_" + ending);
+  </script>
+
+</body>
+</html>

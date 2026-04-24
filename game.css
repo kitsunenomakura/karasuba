@@ -1,0 +1,58 @@
+/* ===============================
+   共通レイアウト
+================================ */
+body {
+  font-family: sans-serif;
+  padding: 40px;
+  line-height: 1.8;
+  background: #f7f0ff; /* タイトルと同系色 */
+  margin: 0;
+}
+
+/* ページタイトル */
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===============================
+   ボタンデザイン（全ページ共通）
+================================ */
+button {
+  font-size: 18px;
+  padding: 12px 25px;
+  margin: 10px;
+  cursor: pointer;
+
+  background: #ffffff;
+  border: 2px solid #b38bff;
+  border-radius: 8px;
+
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #e8d9ff;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* ===============================
+   選択肢ボタンの配置
+================================ */
+.choice {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* ===============================
+   テキストブロック
+================================ */
+p {
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  font-size: 18px;
+}

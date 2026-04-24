@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ストーリー② - A（先輩）</title>
+
+  <link rel="stylesheet" href="game.css">
+  <script src="game.js"></script>
+</head>
+<body>
+
+  <h1>ストーリー②（A：クールな先輩）</h1>
+
+  <p>
+    先輩はあなたを校舎の奥へ案内してくれた。  
+    「……ここは人が少ない。落ち着くだろ」  
+    ふと見せた優しい横顔に、胸が高鳴る。
+  </p>
+
+  <div class="choice">
+    <button onclick="goEnding()">エンディングへ進む</button>
+  </div>
+
+  <script>
+    checkProgress("story2_A");
+    disableBack();
+
+    function goEnding() {
+      addLove("A"); // A の好感度 +1
+
+      const data = loadData();
+      data.progress = "ending";
+      saveData(data);
+
+      goTo("ending");
+    }
+  </script>
+
+</body>
+</html>

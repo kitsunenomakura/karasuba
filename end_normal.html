@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ノーマルエンド</title>
+
+  <link rel="stylesheet" href="game.css">
+  <script src="game.js"></script>
+
+  <style>
+    body { text-align: center; padding-top: 80px; }
+  </style>
+</head>
+<body>
+
+  <h1>ノーマルエンド</h1>
+
+  <p>
+    学園生活はまだ始まったばかり。  
+    これからどんな出会いが待っているのだろう。  
+    あなたの物語は、まだ続いていく。  
+  </p>
+
+  <button onclick="returnToTitle()">タイトルへ戻る</button>
+
+  <script>
+    checkProgress("end_normal");
+    disableBack();
+  </script>
+
+</body>
+</html>
