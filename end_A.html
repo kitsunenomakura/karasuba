@@ -2,30 +2,118 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Aエンド</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>沖田エンド</title>
 
+  <!-- 共通CSS -->
   <link rel="stylesheet" href="game.css">
-  <script src="game.js"></script>
 
-  <style>
-    body { text-align: center; padding-top: 80px; }
-  </style>
+  <!-- 共通JS -->
+  <script src="game.js"></script>
 </head>
 <body>
 
-  <h1>Aエンド</h1>
+<div class="story-container">
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="">
+    <div class="bubble">いたた、目にごみが……とりあえずベンチに座ろう</div>
+  </div>
 
-  <p>
-    先輩は静かにあなたの手を取った。  
-    「……これからも、そばにいてくれ」  
-    その言葉に胸が熱くなる。  
-  </p>
+  <div class="line">
+    <img class="icon" src="img/icon_okita.png" alt="">
+    <div class="bubble">あれ、藤堂さんどうしたんですか？</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="">
+    <div class="bubble">沖田君……どうも目にごみが入ったみたいなんだけど、取れないんだ</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_okita.png" alt="">
+    <div class="bubble">どれどれ、沖田さんが見てあげます</div>
+  </div>
+
+  <img class="still" src="img/still_okita_end.jpg" alt="">
+
+  <div class="line">
+    <img class="icon" src="img/icon_okita.png" alt="">
+    <div class="bubble">じっとしててくださいね……取れた！睫毛が入っちゃってましたね</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="">
+    <div class="bubble">ありがとう。もう大丈夫だ。助かったよ</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_okita.png" alt="">
+    <div class="bubble">いえいえ！　それにしても藤堂さんって綺麗なお顔ですね</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="">
+    <div class="bubble">何言ってるんだ。沖田君こそ傷ひとつなくて綺麗じゃないか</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_okita.png" alt="">
+    <div class="bubble">沖田さん最強ですからねー</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="">
+    <div class="bubble">あの……そろそろ離してくれないか</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_okita.png" alt="">
+    <div class="bubble">ああ、すみません！</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="">
+    <div class="bubble">（顎を掴まれてるだけなのに身動きが取れなかった……）</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_okita.png" alt="">
+    <div class="bubble">そういえば、この後の予定どうなりました？</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="">
+    <div class="bubble">沖田君は剣道部だったね。大丈夫、僕も行けるよ</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_okita.png" alt="">
+    <div class="bubble">やった！　じゃあ一緒に行きましょう！</div>
+  </div>
+
+  <br>
+  <p>おわり</p>
+  <br>
+
+</div>
 
   <button onclick="returnToTitle()">タイトルへ戻る</button>
 
   <script>
     checkProgress("end_A");
     disableBack();
+
+    const data = loadData();
+
+    data.clear.A = true;
+
+    if (data.clear.A && data.clear.B && data.clear.C && data.clear.normal) {
+      data.progress = "secret_end";
+    } else {
+      data.progress = "end_A";
+    }
+
+    saveData(data);
   </script>
 
 </body>

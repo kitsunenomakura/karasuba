@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ノーマルエンド</title>
 
   <link rel="stylesheet" href="game.css">
@@ -26,6 +27,18 @@
   <script>
     checkProgress("end_normal");
     disableBack();
+
+    const data = loadData();
+
+    data.clear.normal = true;
+
+    if (data.clear.A && data.clear.B && data.clear.C && data.clear.normal) {
+      data.progress = "secret_end";
+    } else {
+      data.progress = "end_normal";
+    }
+
+    saveData(data);
   </script>
 
 </body>

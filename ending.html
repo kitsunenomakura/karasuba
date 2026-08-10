@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>エンディング分岐</title>
 
   <link rel="stylesheet" href="game.css">
@@ -23,32 +24,22 @@
     checkProgress("ending");
     disableBack();
 
-    // -------------------------
-    // エンド分岐処理
-    // -------------------------
-    const data = loadData();
+  // エンド分岐処理
+  const data = loadData();
 
-    let ending = "normal"; // デフォルトはノーマル
+  let ending = "normal";
 
-    // 好感度2以上でエンド確定
-    if (data.love.A >= 2) {
-      ending = "A";
-    } else if (data.love.B >= 2) {
-      ending = "B";
-    } else if (data.love.C >= 2) {
-      ending = "C";
-    }
+  if (data.love.A >= 2) {
+    ending = "A";
+  } else if (data.love.B >= 2) {
+    ending = "B";
+  } else if (data.love.C >= 2) {
+    ending = "C";
+  }
 
-    // クリアフラグ更新
-    data.clear[ending] = true;
-
-    // 進行位置更新
-    data.progress = "end_" + ending;
-
-    saveData(data);
-
-    // エンドページへ遷移
-    goTo("end_" + ending);
+  data.progress = "end_" + ending;
+  saveData(data);
+  goTo("end_" + ending);
   </script>
 
 </body>

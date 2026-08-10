@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>乙女ゲーム - タイトル</title>
 
   <!-- 共通CSS -->
@@ -25,23 +26,37 @@
 
   <h1>乙女ゲーム（仮）</h1>
 
+  <img class="icon" src="img/icon_fujimaru.png" alt="">
+  <img class="icon" src="img/icon_todo.png" alt="">
+  <img class="icon" src="img/icon_okita.png" alt="">
+  <br>
+  <img class="icon" src="img/icon_harada.png" alt="">
+  <img class="icon" src="img/icon_saito.png" alt="">
+  <img class="icon" src="img/icon_yamanami.png" alt="">
+  <br>
+  <img class="icon" src="img/icon_nagakura.png" alt="">
+  <img class="icon" src="img/icon_hijikata.png" alt="">
+  <img class="icon" src="img/icon_kondo.png" alt="">
+
   <button id="startBtn">スタート</button>
+  <p id="secretMessage" style="color:#b38bff; font-weight:bold;"></p>
   <br>
   <button onclick="continueGame()">続きから</button>
   <br>
   <button id="resetBtn">セーブデータ初期化</button>
 
   <script>
-    // -------------------------
-    // スタートボタン
-    // -------------------------
+    const data = loadData();
+
+    if (data.clear.A && data.clear.B && data.clear.C) {
+      document.getElementById("secretMessage").textContent =
+        "シークレットエンドが解放されました";
+    }
+
     document.getElementById("startBtn").addEventListener("click", () => {
-      startNewGame();   // ← game.js の関数
+      startNewGame();
     });
 
-    // -------------------------
-    // セーブデータ初期化
-    // -------------------------
     document.getElementById("resetBtn").addEventListener("click", () => {
       if (confirm("セーブデータを削除しますか？")) {
         localStorage.removeItem("otomeSave");

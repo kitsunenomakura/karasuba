@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ストーリー② - A（先輩）</title>
 
   <link rel="stylesheet" href="game.css">
@@ -11,16 +12,41 @@
 
   <h1>ストーリー②（A：クールな先輩）</h1>
 
-  <p>
-    先輩はあなたを校舎の奥へ案内してくれた。  
-    「……ここは人が少ない。落ち着くだろ」  
-    ふと見せた優しい横顔に、胸が高鳴る。
-  </p>
+<div class="story-container">
+
+<!--
+沖「あっ、藤堂さーん！」
+藤「沖田君、それに山南先生。相席しても？」
+山「もちろん」
+藤「失礼します」
+沖「ここのお団子はもちふわで美味しいですよ〜。そして今ならなんと、Aランチに生クリームみたらし団子がついてくるんです！」
+山「そのみたらし団子目当てに、沖田君は僕のところに来たというわけさ」
+藤「なるほど。丁度僕もAランチ頼んでたから、沖田君、お団子あげるよ」
+沖「ええっ！？　いいんですか！　わーい！　お返しにこの三色団子、一本差し上げますね」
+藤「ありがとう。……ほんとだもちもちとふわふわ両立して美味しい」
+山「沖田君、甘味ばかりではなくご飯もちゃんと食べるんだよ」
+沖「ドキッ……藤堂さ〜ん…」
+藤「分かったよ。Aランチ半分こしよう」
+沖「ありがとうございます！」
+山「みんなして沖田君を甘やかすんだから……」
+-->
+  <div class="line">
+    <img class="icon" src="img/test.png" alt="">
+    <div class="bubble">沖「あっ、藤堂さーん！」</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/test.png" alt="">
+    <div class="bubble">藤「沖田君、それに山南先生。相席しても？」</div>
+  </div>
+
+  <img class="still" src="img/story2_A.jpg" alt="">
+</div>
 
   <div class="choice">
     <button onclick="goEnding()">エンディングへ進む</button>
   </div>
-
+  <br><br><br><br><br>
   <script>
     checkProgress("story2_A");
     disableBack();

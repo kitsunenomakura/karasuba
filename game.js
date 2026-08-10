@@ -5,8 +5,29 @@
 // ------------------------------
 // データ読み込み・保存
 // ------------------------------
+function createInitialData() {
+  return {
+    progress: "title",
+    clear: {
+      A: false,
+      B: false,
+      C: false
+    },
+    love: {
+      A: 0,
+      B: 0,
+      C: 0
+    }
+  };
+}
+
 function loadData() {
-  return JSON.parse(localStorage.getItem("otomeSave"));
+  let data = JSON.parse(localStorage.getItem("otomeSave"));
+  if (!data) {
+    data = createInitialData();
+    saveData(data);
+  }
+  return data;
 }
 
 function saveData(data) {
@@ -63,10 +84,10 @@ function addLove(char) {
 // ------------------------------
 function continueGame() {
   const data = loadData();
-  if (!data || data.progress === "title") {
-    alert("続きから再開できるデータがありません");
-    return;
-  }
+//  if (!data || data.progress === "title") {
+//    alert("続きから再開できるデータがありません");
+//    return;
+//  }
   goTo(data.progress);
 }
 
@@ -78,6 +99,7 @@ function startNewGame() {
 
   // 全エンドクリアならシークレットへ
   if (data.clear.A && data.clear.B && data.clear.C && data.clear.normal) {
+    data.progress = "secret_end";
     goTo("secret_end");
     return;
   }

@@ -3,9 +3,9 @@
 ================================ */
 body {
   font-family: sans-serif;
-  padding: 40px;
+  padding: 20px;
   line-height: 1.8;
-  background: #f7f0ff; /* タイトルと同系色 */
+  background: #EBF4F4;
   margin: 0;
 }
 
@@ -16,43 +16,107 @@ h1 {
 }
 
 /* ===============================
-   ボタンデザイン（全ページ共通）
+   セリフブロック（中央寄せ）
 ================================ */
-button {
-  font-size: 18px;
-  padding: 12px 25px;
-  margin: 10px;
-  cursor: pointer;
+.story-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
 
+/* セリフ1行 */
+.line {
+  display: flex;
+  align-items: flex-start;
+  margin: 14px 0;
+}
+
+/* 丸アイコン */
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+/* 吹き出し */
+.bubble {
   background: #ffffff;
-  border: 2px solid #b38bff;
-  border-radius: 8px;
-
-  transition: 0.2s;
-}
-
-button:hover {
-  background: #e8d9ff;
-  transform: translateY(-2px);
-}
-
-button:active {
-  transform: translateY(0);
+  border-radius: 12px;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  max-width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 /* ===============================
-   選択肢ボタンの配置
+   スチル画像
+================================ */
+.still {
+  width: 100%;
+  max-width: 540px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+/* ===============================
+   選択肢ボタン
 ================================ */
 .choice {
   margin-top: 40px;
   text-align: center;
 }
 
-/* ===============================
-   テキストブロック
-================================ */
-p {
-  max-width: 700px;
-  margin: 0 auto 20px auto;
+.choice button {
+  width: 100%;
+  max-width: 300px;
+  padding: 14px;
+  margin: 10px auto;
+  display: block;
   font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  background: #ffb7d5;
+  box-shadow: 0 3px 0 #d48ca8;
+}
+
+/* ===============================
+   スマホ調整
+================================ */
+@media (max-width: 600px) {
+  .icon {
+    width: 48px;
+    height: 48px;
+  }
+  .bubble {
+    font-size: 16px;
+  }
+}
+
+/* ====== ボタン（統一デザイン） ====== */
+button {
+  font-size: 18px;
+  padding: 12px 25px;
+  margin: 10px auto;
+  cursor: pointer;
+
+  background: #ffb7d5;
+  border: none;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 3px 0 #d48ca8;
+
+  display: block;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #ffc6e2;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
 }
