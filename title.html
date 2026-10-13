@@ -22,23 +22,11 @@
     }
   </style>
 </head>
-<body>
+<body id="title-back">
 
-  <h1>乙女ゲーム（仮）</h1>
+  <h1>mission: 特異点で学園生活を謳歌せよ！</h1>
 
-  <img class="icon" src="img/icon_fujimaru.png" alt="">
-  <img class="icon" src="img/icon_todo.png" alt="">
-  <img class="icon" src="img/icon_okita.png" alt="">
-  <br>
-  <img class="icon" src="img/icon_harada.png" alt="">
-  <img class="icon" src="img/icon_saito.png" alt="">
-  <img class="icon" src="img/icon_yamanami.png" alt="">
-  <br>
-  <img class="icon" src="img/icon_nagakura.png" alt="">
-  <img class="icon" src="img/icon_hijikata.png" alt="">
-  <img class="icon" src="img/icon_kondo.png" alt="">
-
-  <button id="startBtn">スタート</button>
+  <button id="startBtn" onclick="checkSecret()">スタート</button>
   <p id="secretMessage" style="color:#b38bff; font-weight:bold;"></p>
   <br>
   <button onclick="continueGame()">続きから</button>
@@ -48,7 +36,7 @@
   <script>
     const data = loadData();
 
-    if (data.clear.A && data.clear.B && data.clear.C) {
+    if (data.clear.A && data.clear.B && data.clear.C && data.clear.normal) {
       document.getElementById("secretMessage").textContent =
         "シークレットエンドが解放されました";
     }
@@ -61,11 +49,22 @@
       if (confirm("セーブデータを削除しますか？")) {
         localStorage.removeItem("otomeSave");
         alert("セーブデータを初期化しました");
+        location.reload();
       }
     });
 
     // タイトル画面は progress チェック不要
-    disableBack();  // 戻る封印（replace方式なので実質何もしない）
+    disableBack();
+
+    function checkSecret() {
+      if (data.clear.A && data.clear.B && data.clear.C && data.clear.normal) {
+        data.progress = "secret_end";
+        saveData(data);
+      }
+
+      goTo("ending");
+    }
+
   </script>
 
 </body>

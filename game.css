@@ -14,7 +14,12 @@ h1 {
   margin-bottom: 20px;
   text-align: center;
 }
-
+#title-back {
+  background-image: url("img/title.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+}
 /* ===============================
    セリフブロック（中央寄せ）
 ================================ */
@@ -78,8 +83,7 @@ h1 {
   font-size: 18px;
   border-radius: 8px;
   border: none;
-  background: #ffb7d5;
-  box-shadow: 0 3px 0 #d48ca8;
+  background: #0683F1;
 }
 
 /* ===============================
@@ -102,18 +106,17 @@ button {
   margin: 10px auto;
   cursor: pointer;
 
-  background: #ffb7d5;
+  background: #0683F1;
   border: none;
-  color: #333;
+  color: #fff;
   border-radius: 8px;
-  box-shadow: 0 3px 0 #d48ca8;
 
   display: block;
   transition: 0.2s;
 }
 
 button:hover {
-  background: #ffc6e2;
+  background: #71B8F8;
   transform: translateY(-2px);
 }
 

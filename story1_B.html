@@ -3,27 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ストーリー① - B（幼なじみ）</title>
+  <title>斎藤ルート①</title>
 
+  <!-- 共通CSS -->
   <link rel="stylesheet" href="game.css">
+
+  <!-- 共通JS -->
   <script src="game.js"></script>
 </head>
 <body>
 
-  <h1>ストーリー①（B：幼なじみ）</h1>
+<div class="story-container">
 
-  <p>
-    幼なじみはあなたを見るなり笑顔を見せた。  
-    「やっと来た！今日からまた一緒だね」  
-    その声は懐かしくて、安心感に包まれる。
-  </p>
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">おはようございます、斎藤さん。びっくりするくらい制服似合わないですね</div>
+  </div>
 
-  <p>次に誰と話す？</p>
+  <div class="line">
+    <img class="icon" src="img/icon_saito.png" alt="斎藤">
+    <div class="bubble">おはよう。びっくりするくらい失礼ね～</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">ただでさえ長生きしただけあって言動が年寄りくさいので、不審がられないようにしてくださいね</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_saito.png" alt="斎藤">
+    <div class="bubble">えっ、僕そんなに年寄りくさい……？</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">冗談です。ちゃんと若作りできてますよ</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_saito.png" alt="斎藤">
+    <div class="bubble">それはそれで……というかさっきから辛辣すぎない？</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">気の所為ですよ。早く行きましょう。残念ながら同じクラスみたいですよ</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_saito.png" alt="斎藤">
+    <div class="bubble">それは本当に残念ね～……</div>
+  </div>
+
+  <br>
+  <p>……</p>
+  <br>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">現代の授業は興味深かったな……。さて、昼休みだ。誰と食べようか</div>
+  </div>
+
+</div>
 
   <div class="choice">
-    <button onclick="chooseRoute('A')">A：先輩と話す</button>
-    <button onclick="chooseRoute('B')">B：幼なじみと話す</button>
-    <button onclick="chooseRoute('C')">C：同級生に声をかける</button>
+    <button onclick="chooseRoute('B')">土方</button>
+    <button onclick="chooseRoute('A')">山南</button>
+    <button onclick="chooseRoute('C')">永倉</button>
   </div>
 
   <script>

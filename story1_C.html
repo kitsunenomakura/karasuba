@@ -3,29 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ストーリー① - C（同級生）</title>
+  <title>原田ルート①</title>
 
+  <!-- 共通CSS -->
   <link rel="stylesheet" href="game.css">
+
+  <!-- 共通JS -->
   <script src="game.js"></script>
 </head>
 <body>
 
-  <h1>ストーリー①（C：同級生）</h1>
+<div class="story-container">
 
-  <p>
-    同級生はあなたに気づくと手を振ってきた。  
-    「あ、君も新入生？よかったら一緒に回らない？」  
-    明るい笑顔に、自然と心が軽くなる。
-  </p>
-
-  <p>次に誰と話す？</p>
-
-  <div class="choice">
-    <button onclick="chooseRoute('A')">A：先輩と話す</button>
-    <button onclick="chooseRoute('B')">B：幼なじみを探す</button>
-    <button onclick="chooseRoute('C')">C：同級生と話す</button>
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">おはようございます、原田さん</div>
   </div>
 
+  <div class="line">
+    <img class="icon" src="img/icon_harada.png" alt="原田">
+    <div class="bubble">ほう、ふぇーふへ</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">……なんで食パンくわえながら歩いてるんですか？</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_harada.png" alt="原田">
+    <div class="bubble">そりゃあ学園ものと言ったらパンくわえて走るもんだろ</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">原田さんみたいな体格の良い人とぶつかったら危ないし、それにもうここ学校ですよ</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_harada.png" alt="原田">
+    <div class="bubble">確かにそうだな。食うか。ジャムか何か持ってないか？</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">ありませんよ……</div>
+  </div>
+
+  <br>
+  <p>……</p>
+  <br>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">現代の授業は興味深かったな……。さて、昼休みだ。誰と食べようか</div>
+  </div>
+
+</div>
+
+  <div class="choice">
+    <button onclick="chooseRoute('B')">土方</button>
+    <button onclick="chooseRoute('A')">山南</button>
+    <button onclick="chooseRoute('C')">永倉</button>
+  </div>
   <script>
     checkProgress("story1_C");
     disableBack();

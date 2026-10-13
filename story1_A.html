@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ストーリー① - A（先輩）</title>
+  <title>沖田ルート①</title>
 
   <!-- 共通CSS -->
   <link rel="stylesheet" href="game.css">
@@ -13,40 +13,63 @@
 </head>
 <body>
 
-  <h1>ストーリー①（A：クールな先輩）</h1>
-
 <div class="story-container">
 
-  <p>
-    先輩は静かにあなたを見つめた。  
-    「……新入生か。迷ってるなら案内してやる」  
-    その声は冷たいようで、どこか優しさが滲んでいた。
-  </p>
-
   <div class="line">
-    <img class="icon" src="img/icon_fujimaru.png" alt="">
-    <div class="bubble">「……新入生か。迷ってるなら案内してやる」</div>
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">沖田君、おはよう</div>
   </div>
 
   <div class="line">
-    <img class="icon" src="img/icon_todo.png" alt="">
-    <div class="bubble">「お願いします」</div>
+    <img class="icon" src="img/icon_okita.png" alt="沖田">
+    <div class="bubble">あっ、藤堂さん！　おはようございます</div>
   </div>
-
-  <img class="still" src="img/still001.png" alt="">
 
   <div class="line">
-    <img class="icon" src="img/test.png" alt="">
-    <div class="bubble">「てすてす」</div>
+    <img class="icon" src="img/icon_okita.png" alt="沖田">
+    <div class="bubble">どうです？　制服似合ってるでしょう？</div>
   </div>
 
-  <p>次に誰と話す？</p>
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">うん。よく似合ってる</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_okita.png" alt="沖田">
+    <div class="bubble">えへへー、ありがとうございます！</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">その、持ってるのは竹刀？</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_okita.png" alt="沖田">
+    <div class="bubble">はい！　剣道部なんです。良かったら放課後一緒に行きましょう！</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">そうだな、サッカー部が休みだったら行くよ</div>
+  </div>
+
+  <br>
+  <p>……</p>
+  <br>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">現代の授業は興味深かったな……。さて、昼休みだ。誰と食べようか</div>
+  </div>
+
 </div>
 
   <div class="choice">
-    <button onclick="chooseRoute('A')">A：先輩と話す</button>
-    <button onclick="chooseRoute('B')">B：幼なじみを探す</button>
-    <button onclick="chooseRoute('C')">C：同級生に声をかける</button>
+    <button onclick="chooseRoute('B')">土方</button>
+    <button onclick="chooseRoute('A')">山南</button>
+    <button onclick="chooseRoute('C')">永倉</button>
   </div>
 
   <script>

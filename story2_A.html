@@ -3,48 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ストーリー② - A（先輩）</title>
+  <title>沖田ルート②</title>
 
+  <!-- 共通CSS -->
   <link rel="stylesheet" href="game.css">
+
+  <!-- 共通JS -->
   <script src="game.js"></script>
 </head>
 <body>
 
-  <h1>ストーリー②（A：クールな先輩）</h1>
-
 <div class="story-container">
-
-<!--
-沖「あっ、藤堂さーん！」
-藤「沖田君、それに山南先生。相席しても？」
-山「もちろん」
-藤「失礼します」
-沖「ここのお団子はもちふわで美味しいですよ〜。そして今ならなんと、Aランチに生クリームみたらし団子がついてくるんです！」
-山「そのみたらし団子目当てに、沖田君は僕のところに来たというわけさ」
-藤「なるほど。丁度僕もAランチ頼んでたから、沖田君、お団子あげるよ」
-沖「ええっ！？　いいんですか！　わーい！　お返しにこの三色団子、一本差し上げますね」
-藤「ありがとう。……ほんとだもちもちとふわふわ両立して美味しい」
-山「沖田君、甘味ばかりではなくご飯もちゃんと食べるんだよ」
-沖「ドキッ……藤堂さ〜ん…」
-藤「分かったよ。Aランチ半分こしよう」
-沖「ありがとうございます！」
-山「みんなして沖田君を甘やかすんだから……」
--->
   <div class="line">
-    <img class="icon" src="img/test.png" alt="">
-    <div class="bubble">沖「あっ、藤堂さーん！」</div>
+    <img class="icon" src="img/icon_okita.png" alt="沖田">
+    <div class="bubble">あっ、藤堂さーん！</div>
   </div>
 
   <div class="line">
-    <img class="icon" src="img/test.png" alt="">
-    <div class="bubble">藤「沖田君、それに山南先生。相席しても？」</div>
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">沖田君、それに山南先生。相席しても？</div>
   </div>
 
-  <img class="still" src="img/story2_A.jpg" alt="">
+  <div class="line">
+    <img class="icon" src="img/icon_yamanami.png" alt="山南">
+    <div class="bubble">もちろん</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">失礼します</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_okita.png" alt="沖田">
+    <div class="bubble">ここのお団子はもちふわで美味しいですよ～。そして今ならなんと、Aランチに生クリームみたらし団子がついてくるんです！</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_yamanami.png" alt="山南">
+    <div class="bubble">そのみたらし団子目当てに、沖田君は僕のところに来たというわけさ</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">なるほど。丁度僕もAランチ頼んでたから、沖田君、お団子あげるよ</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_okita.png" alt="沖田">
+    <div class="bubble">ええっ！？　いいんですか！　わーい！　お返しにこの三色団子、一本差し上げますね</div>
+  </div>
+
+  <img class="still" src="img/still_okita_2.jpg" alt="沖田ルート②">
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">ありがとう。……ほんとだもちもちとふわふわ両立して美味しい</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_yamanami.png" alt="山南">
+    <div class="bubble">沖田君、甘味ばかりではなくご飯もちゃんと食べるんだよ</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_okita.png" alt="沖田">
+    <div class="bubble">ドキッ……藤堂さ～ん……</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">分かったよ。Aランチ半分こしよう</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_okita.png" alt="沖田">
+    <div class="bubble">ありがとうございます！</div>
+  </div>
+
+  <div class="line">
+    <img class="icon" src="img/icon_yamanami.png" alt="山南">
+    <div class="bubble">もう……みんな沖田君を甘やかすんだから……</div>
+  </div>
+
+  <br>
+  <p>……</p>
+  <br>
+
+  <div class="line">
+    <img class="icon" src="img/icon_todo.png" alt="藤堂">
+    <div class="bubble">今日の授業はこれで最後か。……さて、そろそろ帰ろう</div>
+  </div>
+
 </div>
 
   <div class="choice">
-    <button onclick="goEnding()">エンディングへ進む</button>
+    <button onclick="goEnding()">次へ</button>
   </div>
   <br><br><br><br><br>
   <script>
