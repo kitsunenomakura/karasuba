@@ -94,8 +94,11 @@ h1 {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: url("img/title_todo.jpg")
-      center / cover;
+    background-attachment: fixed;
+    background: url("img/title_todo.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
   }
 
   .icon {
