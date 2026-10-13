@@ -90,6 +90,12 @@ h1 {
    スマホ調整
 ================================ */
 @media (max-width: 600px) {
+  #title-back {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;    background-image: url("img/title.jpg");
+  }
+
   .icon {
     width: 48px;
     height: 48px;
