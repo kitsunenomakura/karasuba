@@ -15,7 +15,7 @@ h1 {
   text-align: center;
 }
 #title-back {
-  background-image: url("img/title.jpg");
+  background-image: url("img/title_todo.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: contain;
@@ -93,7 +93,9 @@ h1 {
   #title-back {
     position: relative;
     width: 100%;
-    min-height: 100vh;    background-image: url("img/title.jpg");
+    min-height: 100vh;
+    background: url("img/title_todo.jpg")
+      center / cover;
   }
 
   .icon {
@@ -109,7 +111,7 @@ h1 {
 button {
   font-size: 18px;
   padding: 12px 25px;
-  margin: 10px auto;
+  margin: 10px;
   cursor: pointer;
 
   background: #0683F1;

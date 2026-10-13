@@ -13,7 +13,7 @@
 
   <style>
     body {
-      text-align: center;
+      text-align: right;
       padding-top: 80px;
     }
     h1 {
@@ -26,12 +26,14 @@
 
   <h1>mission: 特異点で学園生活を謳歌せよ！</h1>
 
+  <div align="right">
   <button id="startBtn" onclick="checkSecret()">スタート</button>
-  <p id="secretMessage" style="color:#b38bff; font-weight:bold;"></p>
+  <span id="secretMessage" style="color:#b38bff; font-weight:bold;"></span>
   <br>
   <button onclick="continueGame()">続きから</button>
   <br>
-  <button id="resetBtn">セーブデータ初期化</button>
+  <button id="resetBtn">初期化</button>
+  </div>
 
   <script>
     const data = loadData();
