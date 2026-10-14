@@ -3,7 +3,6 @@
 ================================ */
 body {
   font-family: sans-serif;
-  padding: 20px;
   line-height: 1.8;
   background: #EBF4F4;
   margin: 0;
@@ -20,10 +19,17 @@ h1 {
   background-attachment: fixed;
   background-size: contain;
 }
+
+.title-menu {
+  padding: 20px;
+  align: right;
+  width: 100%;
+}
 /* ===============================
    セリフブロック（中央寄せ）
 ================================ */
 .story-container {
+  padding: 20px;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -80,7 +86,7 @@ h1 {
   padding: 14px;
   margin: 10px auto;
   display: block;
-  font-size: 18px;
+  font-size: 14px;
   border-radius: 8px;
   border: none;
   background: #0683F1;
@@ -104,14 +110,14 @@ h1 {
     height: 48px;
   }
   .bubble {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
 /* ====== ボタン（統一デザイン） ====== */
 button {
-  font-size: 18px;
-  padding: 12px 25px;
+  font-size: 14px;
+  padding: 10px 20px;
   margin: 10px;
   cursor: pointer;
 
@@ -131,4 +137,8 @@ button:hover {
 
 button:active {
   transform: translateY(0);
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* 右寄せ */
 }
