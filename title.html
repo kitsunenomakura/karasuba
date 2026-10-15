@@ -14,21 +14,26 @@
   <style>
     body {
       text-align: right;
-      height: 100vh;
-      display: flex;
-      align-items: flex-end;
-    }
-    h1 {
-      font-size: 40px;
-      margin-bottom: 40px;
+      height: 100dvh;
     }
   </style>
 </head>
 <body id="title-back">
 
   <div class="title-menu">
-  <img src="img/title_name.png" width="200px" alt="題字">
+  <div class="title-sub-menu">
+    <button>Q&A</button>
+    <button>wavebox</button>
+    <button>後書き</button>
+  </div>
 
+  <div class="title-main-menu">
+  <img src="img/title_name.png" width="200px" alt="題字"><br>
+<!--
+  <img src="img/title_okita.png" width="100px" alt="沖田">
+  <img src="img/title_harada.png" width="100px" alt="原田">
+  <img src="img/title_saito.png" width="100px" alt="斎藤"><br>
+-->
   <div class="button-container">
   <button id="startBtn" onclick="checkSecret()">スタート</button>
   <button onclick="continueGame()">続きから</button>
@@ -36,6 +41,7 @@
   </div>
   <span id="secretMessage" style="color:#b38bff; font-weight:bold;"></span>
   
+  </div>
   </div>
 
   <script>
