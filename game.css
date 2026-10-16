@@ -14,10 +14,10 @@ h1 {
   text-align: center;
 }
 #title-back {
-  background-image: url("img/title_todo.jpg");
+  background-image: url("img/title_test.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
 }
 
 /* ===============================
@@ -129,7 +129,7 @@ h1 {
   #title-back {
     position: relative;
     background-attachment: fixed;
-    background: url("img/title_todo.jpg");
+    background: url("img/title_mobile.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
