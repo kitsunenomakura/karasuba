@@ -40,7 +40,8 @@ function saveData(data) {
 function checkProgress(expected) {
   const data = loadData();
   if (!data || data.progress !== expected) {
-    location.replace(location.href);
+//    location.replace(location.href);
+    goTo("title");
   }
 }
 
