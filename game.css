@@ -48,7 +48,7 @@ a:active {
 .title-menu {
   display: flex;
   flex-direction: column;
-  height: 100%; /* または特定の高さや100dvh */
+  height: 100%;
 }
 
 .title-sub-menu {
@@ -73,7 +73,7 @@ a:active {
   margin-top: auto;
 }
 /* ===============================
-   セリフブロック（中央寄せ）
+   セリフブロック
 ================================ */
 .story-container {
   padding: 20px;
@@ -140,7 +140,7 @@ a:active {
 }
 
 /* ===============================
-   スマホ調整
+   スマホ
 ================================ */
 @media (max-width: 600px) {
   #title-back {
@@ -161,7 +161,7 @@ a:active {
   }
 }
 
-/* ====== ボタン（統一デザイン） ====== */
+/* ====== ボタン ====== */
 button {
   font-size: 14px;
   padding: 10px 20px;
@@ -186,5 +186,5 @@ button:active {
 }
 .button-container {
   display: flex;
-  justify-content: flex-end; /* 右寄せ */
+  justify-content: flex-end;
 }
